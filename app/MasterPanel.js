@@ -2,7 +2,6 @@ Drinkopedia.MasterPanel = Ext.extend(Ext.Panel, {
   layout: 'card',
   fullscreen: true,
   
-
   initComponent: function(){
     this.tbar = new Drinkopedia.SearchToolbar();
     this.dockedItems = [this.tbar];
@@ -34,35 +33,41 @@ Drinkopedia.MasterPanel = Ext.extend(Ext.Panel, {
     this.setActiveItem('home', anim || 'fade');
     this.tbar.setTitle('Drinkopedia');
     this.tbar.hideBackButton();
+    this.prevPanels = [];
   },
   
-  onCategorySelected: function(t, record) {
-    console.log('category selected');
-    if(record.get('children')) {
-      var subCatStore = Ext.StoreMgr.get(Drinkopedia.SubCategoriesStore.storeId);
-      subCatStore.loadData(record.get('children'));
-      this.setActiveItem('subcategory-list', 'fade');
-    } else {
-      console.log('inside else');
-      this.clearDrinksFilter();
-      var drinksStore = Ext.StoreMgr.get(Drinkopedia.DrinksStore.storeId);
-      var filter = record.get('id');
-      console.log("filter => %s", filter);
-
-      if(filter != 'all-drinks') drinksStore.filter(Drinkopedia.DrinksTagFilter(filter));
-      this.setActiveItem('drink-list', 'fade');
-    }
-    
-    this.tbar.setTitle(record.get('name'));
+  showPanel: function(id, title, anim) {
+    var activeItem = this.getLayout().activeItem;
+    activeItem.drinkopediaTitle = this.tbar.title;
+    if(activeItem.id != 'home') this.prevPanels.push(activeItem);
+    this.setActiveItem(id, anim || {type: 'slide', direction: 'left'});
+    this.tbar.setTitle(title);
     this.tbar.showBackButton();
   },
   
-  onBack: function() {
-    var current = this.getLayout().activeItem;
-    if (current instanceof Drinkopedia.DrinkListPanel) {
-      this.showHome({type: 'slide', direction: 'right'});
+  onCategorySelected: function(t, record) {
+    if(record.get('children')) {
+      var subCatStore = Ext.StoreMgr.get(Drinkopedia.SubCategoriesStore.storeId);
+      subCatStore.loadData(record.get('children'));
+      this.showPanel('subcategory-list', record.get('name'));
+    } else {
       this.clearDrinksFilter();
+      var drinksStore = Ext.StoreMgr.get(Drinkopedia.DrinksStore.storeId);
+      var filter = record.get('id');
+
+      if(filter != 'all-drinks') drinksStore.filter(Drinkopedia.DrinksTagFilter(filter));
+      this.showPanel('drink-list', record.get('name'));
     }
+  },
+  
+  onBack: function() {
+    if(!this.prevPanels || this.prevPanels.length == 0) { 
+      this.showHome();
+      return;
+    }
+    var prevPanel = this.prevPanels.pop();
+    this.setActiveItem(prevPanel.id, {type: 'slide', direction: 'left'});
+    this.tbar.setTitle(prevPanel.drinkopediaTitle);
   },
   
   clearDrinksFilter: function() {

@@ -10,7 +10,7 @@ Ext.regModel('Drink', {
 Drinkopedia.DrinksTagFilter = function(tag) {
   return new Ext.util.Filter({
     filterFn: function(item) {
-      return item.get('tags').indexOf(tag) > 0;
+      return item.get('tags').indexOf(tag) != -1;
     }
   });
 };
