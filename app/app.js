@@ -1,7 +1,7 @@
 Ext.setup({
-  tabletStartupScreen: 'tablet_startup.png',
-  phoneStartupScreen: 'phone_startup.png',
-  icon: 'icon.png',
+  tabletStartupScreen: 'splash.png',
+  phoneStartupScreen: 'splash-phone.png',
+  icon: '72x72.png',
   glossOnIcon: false,
 
   onReady: function() {
