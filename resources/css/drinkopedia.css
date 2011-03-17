@@ -1,0 +1,151 @@
+.wrapper {
+  width: 640px;
+  height: 960px;
+  background: url(../images/book-casing.png) no-repeat;
+  padding-top: 28px;
+}
+
+.content {
+  background: url(../images/papers.png) no-repeat;
+  height: 100%;
+  padding-top: 28px;
+  width: 613px;
+}
+
+h1.select-drink {
+  background: url(../images/select-your-drink.png) no-repeat;
+  height: 56px;
+  width: 403px;
+  margin: 10px auto 0;
+  text-indent: -9999px;
+}
+
+.clear {
+  clear: both;
+}
+
+#dp-menu-items {  
+  height: 100%;
+  padding: 0 45px;
+  margin-top: 10px;
+}
+
+#dp-menu-items li {
+  width: 255px;
+  height: 200px;
+  background: gray;
+  display: block;
+  float: left;
+  margin: 0 6px 6px 0;
+  text-indent: -9999px;
+}
+
+#dp-menu-items li.last {
+ margin-right: 0; 
+}
+
+#dp-menu-items li.all-drinks {
+  background: url(../images/all-drinks.png) no-repeat center;
+}
+
+#dp-menu-items li.all-drinks.x-item-selected {
+  background: url(../images/all-drinks-selected.png) no-repeat center;
+}
+
+#dp-menu-items li.favorites {
+  background: url(../images/favorites.png) no-repeat center;
+}
+
+#dp-menu-items li.favorites.x-item-selected {
+  background: url(../images/favorites-selected.png) no-repeat center;
+}
+
+#dp-menu-items li.drink-type {
+  background: url(../images/drink-type.png) no-repeat center;
+}
+
+#dp-menu-items li.drink-type.x-item-selected {
+  background: url(../images/drink-type-selected.png) no-repeat center;
+}
+
+#dp-menu-items li.liquor-type {
+  background: url(../images/liquor-type.png) no-repeat center;
+}
+
+#dp-menu-items li.liquor-type.x-item-selected {
+  background: url(../images/liquor-type-selected.png) no-repeat center;
+}
+
+#dp-menu-items li.add-ons {
+  background: url(../images/add-ons.png) no-repeat center;
+}
+
+#dp-menu-items li.add-ons.x-item-selected {
+  background: url(../images/add-ons-selected.png) no-repeat center;
+}
+
+#dp-menu-items li.most-popular {
+  background: url(../images/most-popular.png) no-repeat center;
+}
+
+#dp-menu-items li.most-popular.x-item-selected {
+  background: url(../images/most-popular-selected.png) no-repeat center;
+}
+
+#dp-drink-list, #dp-subcategory-list {
+  padding: 0 20px;
+}
+
+#dp-drink-list li, #dp-subcategory-list li {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#dp-subcategory-list li { 
+  border-bottom: 2px solid #adb5b9;
+  padding: 0 5px;
+  width: 98%;
+}
+
+#dp-drink-list li img {
+  background: url(../images/img-background.png) no-repeat;
+  padding: 5px;
+  display: block;
+  float: left;
+}
+
+#dp-drink-list li .drink-content {
+  float: left;
+  width: 375px;
+  height: 85px;
+  margin: 0 10px;
+  border-bottom: 2px solid #adb5b9;
+}
+
+#dp-drink-list li .drink-content h2, 
+#dp-subcategory-list li h2 {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #3f5c74;
+}
+
+#dp-drink-list li .drink-content p {
+  font-size: 0.85em;
+  color: #000;
+}
+
+#dp-drink-list li .add-to-favorites {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: url(../images/star.png);
+  width: 49px;
+  height: 40px;
+}
+
+#dp-drink-list li .add-to-favorites.selected {
+  background: url(../images/star-selected.png);
+}
+
+
+
