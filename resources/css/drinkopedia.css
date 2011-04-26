@@ -1,22 +1,26 @@
+body {
+  font-size: 100%;
+}
+
 .wrapper {
-  width: 640px;
-  height: 960px;
+  width: 40em;
+  height: 60em;
   background: url(../images/book-casing.png) no-repeat;
-  padding-top: 28px;
+  padding-top: 1.75em;
 }
 
 .content {
   background: url(../images/papers.png) no-repeat;
   height: 100%;
-  padding-top: 28px;
-  width: 613px;
+  padding-top: 1.75em;
+  width: 38.31em;
 }
 
 h1.select-drink {
   background: url(../images/select-your-drink.png) no-repeat;
-  height: 56px;
-  width: 403px;
-  margin: 10px auto 0;
+  height: 3.5em;
+  width: 25.19em;
+  margin: 0.62em auto 0;
   text-indent: -9999px;
 }
 
@@ -26,17 +30,17 @@ h1.select-drink {
 
 #dp-menu-items {  
   height: 100%;
-  padding: 0 45px;
-  margin-top: 10px;
+  padding: 0 2.81em;
+  margin-top: 0.63em;
 }
 
 #dp-menu-items li {
-  width: 255px;
-  height: 200px;
+  width: 15.93em;
+  height: 12.5em;
   background: gray;
   display: block;
   float: left;
-  margin: 0 6px 6px 0;
+  margin: 0 0.38em 0.38em 0;
   text-indent: -9999px;
 }
 
@@ -93,12 +97,12 @@ h1.select-drink {
 }
 
 #dp-drink-list, #dp-subcategory-list {
-  padding: 0 20px;
+  padding: 0 1.25em;
 }
 
 #dp-drink-list li, #dp-subcategory-list li {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 1.25em;
 }
 
 #dp-subcategory-list li { 
@@ -116,8 +120,8 @@ h1.select-drink {
 
 #dp-drink-list li .drink-content {
   float: left;
-  width: 375px;
-  height: 85px;
+  width: 23.43em;
+  height: 5.31em;
   margin: 0 10px;
   border-bottom: 2px solid #adb5b9;
 }
@@ -139,8 +143,8 @@ h1.select-drink {
   right: 0;
   top: 0;
   background: url(../images/star.png);
-  width: 49px;
-  height: 40px;
+  width: 3.06em;
+  height: 2.5em;
 }
 
 #dp-drink-list li .add-to-favorites.selected {
