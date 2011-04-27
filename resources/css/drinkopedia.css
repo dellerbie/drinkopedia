@@ -2,25 +2,30 @@ body {
   font-size: 100%;
 }
 
+body.x-iphone-os.x-phone {
+  font-size: 114%;
+}
+
+body.x-android-os.x-phone {
+  font-size: 120%;
+}
+
 .wrapper {
-  width: 40em;
-  height: 60em;
   background: url(../images/book-casing.png) no-repeat;
+  background-size: 17.6em 24.33em;
   padding-top: 1.75em;
 }
 
 .content {
   background: url(../images/papers.png) no-repeat;
-  height: 100%;
-  padding-top: 1.75em;
-  width: 38.31em;
+  background-size: 16.91em 23.53em;
+  padding-top: 1em;
 }
 
 h1.select-drink {
   background: url(../images/select-your-drink.png) no-repeat;
-  height: 3.5em;
-  width: 25.19em;
-  margin: 0.62em auto 0;
+  background-size: 11.11em 1.54em;
+  margin-left: 2.75em;
   text-indent: -9999px;
 }
 
@@ -29,18 +34,15 @@ h1.select-drink {
 }
 
 #dp-menu-items {  
-  height: 100%;
-  padding: 0 2.81em;
-  margin-top: 0.63em;
+  margin-left: 1.1em;
 }
 
 #dp-menu-items li {
-  width: 15.93em;
-  height: 12.5em;
-  background: gray;
+  width: 7.5em;
+  height: 6em;
   display: block;
   float: left;
-  margin: 0 0.38em 0.38em 0;
+  margin: 0;
   text-indent: -9999px;
 }
 
@@ -50,6 +52,7 @@ h1.select-drink {
 
 #dp-menu-items li.all-drinks {
   background: url(../images/all-drinks.png) no-repeat center;
+  background-size: 4.99em 3.64em;
 }
 
 #dp-menu-items li.all-drinks.x-item-selected {
@@ -58,6 +61,7 @@ h1.select-drink {
 
 #dp-menu-items li.favorites {
   background: url(../images/favorites.png) no-repeat center;
+  background-size: 4.16em 3.5em;
 }
 
 #dp-menu-items li.favorites.x-item-selected {
@@ -66,6 +70,7 @@ h1.select-drink {
 
 #dp-menu-items li.drink-type {
   background: url(../images/drink-type.png) no-repeat center;
+  background-size: 6.45em 4.94em;
 }
 
 #dp-menu-items li.drink-type.x-item-selected {
@@ -74,6 +79,7 @@ h1.select-drink {
 
 #dp-menu-items li.liquor-type {
   background: url(../images/liquor-type.png) no-repeat center;
+  background-size: 6.95em 5.24em;
 }
 
 #dp-menu-items li.liquor-type.x-item-selected {
@@ -82,6 +88,7 @@ h1.select-drink {
 
 #dp-menu-items li.add-ons {
   background: url(../images/add-ons.png) no-repeat center;
+  background-size: 4.27em 3.31em;
 }
 
 #dp-menu-items li.add-ons.x-item-selected {
@@ -90,6 +97,7 @@ h1.select-drink {
 
 #dp-menu-items li.most-popular {
   background: url(../images/most-popular.png) no-repeat center;
+  background-size: 6.09em 3.86em
 }
 
 #dp-menu-items li.most-popular.x-item-selected {

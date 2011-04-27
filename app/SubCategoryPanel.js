@@ -16,7 +16,7 @@ Drinkopedia.SubCategoryPanel = Ext.extend(Ext.DataView, {
     this.enableBubble('categorySelected');
     
     this.monitorOrientation = true;
-    this.scroll = false;
+    this.scroll = true;
     this.tpl = this.portraitTpl;
     this.itemSelector = '#dp-subcategory-list li';
     this.store = 'subCategoryStore';

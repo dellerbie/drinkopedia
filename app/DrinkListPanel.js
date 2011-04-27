@@ -5,7 +5,7 @@ Drinkopedia.DrinkListPanel = Ext.extend(Ext.DataView, {
    			'<ul id="dp-drink-list">',
    			  '<tpl for=".">',
    				  '<li>',
-    					'<img src="resources/images/{glass}.png" width="105" height="85" />',
+    					'<img src="resources/images/{glass}.png" width="" height="" />',
     					'<div class="drink-content">',
     						'<h2>{name}</h2>',
     						'<p>{short-description}</p>',
@@ -24,7 +24,7 @@ Drinkopedia.DrinkListPanel = Ext.extend(Ext.DataView, {
     this.enableBubble('drinkSelected');
     
     this.monitorOrientation = true;
-    this.scroll = false;
+    this.scroll = true;
     this.tpl = this.portraitTpl;
     this.itemSelector = '#dp-drink-list li';
     this.store = 'drinksStore';

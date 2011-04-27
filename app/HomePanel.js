@@ -9,7 +9,9 @@ Drinkopedia.HomePanel = Ext.extend(Ext.DataView, {
    			  '<tpl for=".">',
    				  '<li class="{id} {[xindex % 2 === 0 ? "last" : ""]}">{name}</li>',
    				'</tpl>',
+   				'<div class="clear"></div>',
    			'</ul>',
+   			'<div class="clear"></div>',
    		'</div>',
    	'</div>'
   ),
@@ -19,7 +21,7 @@ Drinkopedia.HomePanel = Ext.extend(Ext.DataView, {
     this.enableBubble('categorySelected');
     
     this.monitorOrientation = true;
-    this.scroll = false;
+    this.scroll = true;
     this.tpl = this.portraitTpl;
     
     this.store = new Ext.data.Store({
