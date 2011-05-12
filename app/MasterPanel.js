@@ -30,7 +30,7 @@ Drinkopedia.MasterPanel = Ext.extend(Ext.Panel, {
   },
   
   showHome: function(anim) {
-    this.setActiveItem('home', anim || 'fade');
+    this.setActiveItem('home', {type: 'slide', direction: 'right'});
     this.tbar.setTitle('Drinkopedia');
     this.tbar.hideBackButton();
     this.prevPanels = [];
@@ -66,7 +66,7 @@ Drinkopedia.MasterPanel = Ext.extend(Ext.Panel, {
       return;
     }
     var prevPanel = this.prevPanels.pop();
-    this.setActiveItem(prevPanel.id, {type: 'slide', direction: 'left'});
+    this.setActiveItem(prevPanel.id, {type: 'slide', direction: 'right'});
     this.tbar.setTitle(prevPanel.drinkopediaTitle);
   },
   

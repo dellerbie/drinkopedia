@@ -13,13 +13,16 @@ body.x-android-os.x-phone {
 .wrapper {
   background: url(../images/book-casing.png) no-repeat;
   background-size: 17.6em 24.33em;
-  padding-top: 1.75em;
+  padding-top: 1em;
+  min-height: 24em;
 }
 
 .content {
   background: url(../images/papers.png) no-repeat;
   background-size: 16.91em 23.53em;
   padding-top: 1em;
+  min-height: 23.2em;
+  width: 17.65em;
 }
 
 h1.select-drink {
@@ -110,17 +113,20 @@ h1.select-drink {
 
 #dp-drink-list li, #dp-subcategory-list li {
   position: relative;
-  margin-bottom: 1.25em;
+  margin-bottom: 0.75em;
 }
 
 #dp-subcategory-list li { 
   border-bottom: 2px solid #adb5b9;
   padding: 0 5px;
-  width: 98%;
+  width: 96%;
 }
 
 #dp-drink-list li img {
   background: url(../images/img-background.png) no-repeat;
+  background-size: 4.25em 3.67em;
+  width: 4.25em;
+  height: 3.67em;
   padding: 5px;
   display: block;
   float: left;
@@ -128,31 +134,34 @@ h1.select-drink {
 
 #dp-drink-list li .drink-content {
   float: left;
-  width: 23.43em;
-  height: 5.31em;
+  width: 9.34em;
+  height: 3.34em;
   margin: 0 10px;
   border-bottom: 2px solid #adb5b9;
 }
 
 #dp-drink-list li .drink-content h2, 
 #dp-subcategory-list li h2 {
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   font-weight: bold;
+  font-size: 0.85em;
+  font-family: Helvetica serif;
   color: #3f5c74;
 }
 
 #dp-drink-list li .drink-content p {
-  font-size: 0.85em;
+  font-size: 0.7em;
   color: #000;
 }
 
 #dp-drink-list li .add-to-favorites {
   position: absolute;
-  right: 0;
+  right: -5px;
   top: 0;
   background: url(../images/star.png);
-  width: 3.06em;
-  height: 2.5em;
+  background-size: 1.35em 1.10em;
+  width: 1.35em;
+  height: 1.10em;
 }
 
 #dp-drink-list li .add-to-favorites.selected {
