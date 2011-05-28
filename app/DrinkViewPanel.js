@@ -1,7 +1,7 @@
 Drinkopedia.DrinkViewPanel = Ext.extend(Ext.Panel, {
   portraitTpl: new Ext.XTemplate(
      '<div class="wrapper">',
-   		'<div id="drink-view" class="content">',
+   		'<div class="content">',
   			'<div id="img-wrapper">',
   				'<img src="resources/images/{glass}.png" width="" height="" />',
   				'<span id="add-to-fave"></span>',
