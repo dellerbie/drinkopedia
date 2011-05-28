@@ -4,7 +4,8 @@ Ext.regModel('Category', {
 });
 
 Ext.regModel('Drink', {
-  fields: ['name', 'ingredients', "mixing-instructions", "short-description", "glass", "tags"]
+  fields: ["name", "ingredients", "mixingInstructions", "short-description", "glass", "tags"],
+  idProperty: "id"
 });
 
 Drinkopedia.DrinksTagFilter = function(tag) {
@@ -48,34 +49,64 @@ Drinkopedia.Categories = {
   },{
     "name": "Favorites",
     "id": "favorites"
-  },{
-    "name": "Add Ons",
-    "id": "add-ons"
   }]
 };
 
 Drinkopedia.Drinks = {
   "drinks": [{
+    "id": 1,
     "name": "Moonlight",
-    "ingredients": "2 oz. Apple Brandy<br/>1 oz. Lemon Juice<br/>1 tsp. Superfine Sugar (or Simple Syrup)",
-    "mixing-instructions": "Shake with ice and strain into ice-filled old-fashioned glass.",
+    "ingredients": [{
+      "amount": "2 oz.",
+      "ingredient": "Apple Brandy"
+    },{
+      "amount": "1 tsp.",
+      "ingredient": "Lemon Juice Superfine Sugar (or Simple Syrup)"
+    }],
+    "mixingInstructions": [{
+      "instruction": "Shake with ice and strain into ice-filled old-fashioned glass.",
+    },{
+      "instruction": "Lorem ipsum dolor sit amet, consectetur adipinsing elit."
+    }],
     "short-description": "Lorem ipsum dolor sit amet, consectetur adipinsing elit.",
     "tags": ["brandy", "most-popular", "martini"],
-    "glass": "martini",
+    "glass": "martini"
   },{
+    "id": 2,
     "name": "Alfie Cocktail",
-    "ingredients": "1.5 oz. Lemon-flavored Vodka<br/>1 tbsp. Pineapple Juice<br/>1 dash Triple Sec",
-    "mixing-instructions": "Shake with ice and strain into chilled cocktail glass.",
+    "ingredients": [{
+      "amount": "2 oz.",
+      "ingredient": "Apple Brandy"
+    },{
+      "amount": "1 tsp.",
+      "ingredient": "Lemon Juice Superfine Sugar (or Simple Syrup)"
+    }],
+    "mixingInstructions": [{
+      "instruction": "ce and strain into ice-filled old-fashioned glass.",
+    },{
+      "instruction": "Lorem ipsum dolor sit amet, consectetur adipinsing elit."
+    }],
     "short-description": "Lorem ipsum dolor sit amet, consectetur adipinsing elit.",
     "tags": ["vodka", "martini"],
-    "glass": "martini",
+    "glass": "martini"
   },{
+    "id": 3,
     "name": "Mamie Gilroy",
-    "ingredients": "1.5 oz. Lemon-flavored Vodka<br/>1 tbsp. Pineapple Juice<br/>1 dash Triple Sec",
-    "mixing-instructions": "Shake with ice and strain into chilled cocktail glass.",
+    "ingredients": [{
+      "amount": "2 oz.",
+      "ingredient": "Apple Brandy"
+    },{
+      "amount": "1 tsp.",
+      "ingredient": "Lemon Juice Superfine Sugar (or Simple Syrup)"
+    }],
+    "mixingInstructions": [{
+      "instruction": "Shake with ice and strain into ice-filled old-fashioned glass.",
+    },{
+      "instruction": "Lorem ipsum dolor sit amet, consectetur adipinsing elit."
+    }],
     "short-description": "Lorem ipsum dolor sit amet, consectetur adipinsing elit.",
     "tags": ["whiskey", "most-popular", "martini"],
-    "glass": "martini",
+    "glass": "martini"
   }]
 };
 
@@ -92,4 +123,9 @@ Drinkopedia.DrinksStore = new Ext.data.Store({
 Drinkopedia.SubCategoriesStore = new Ext.data.Store({
   model: 'Category',
   storeId: 'subCategoryStore'
+});
+
+Drinkopedia.DrinkStore = new Ext.data.Store({
+  model: 'Drink',
+  storeId: 'drinkStore'
 });

@@ -13,18 +13,18 @@ Drinkopedia.SearchToolbar = Ext.extend(Ext.Toolbar, {
           self.fireEvent('back', this);
       }
     });
-    this.searchField = new Ext.form.Text();
+    // this.searchField = new Ext.form.Text();
     
     this.items = [
       this.backButton,
       {xtype: 'spacer'},
-      this.searchField
+      // this.searchField
     ];
     
     Drinkopedia.SearchToolbar.superclass.initComponent.call(this);
-    this.addEvents('search');
+    // this.addEvents('search');
     
-    this.searchField.on('keyup', this.onSearchKeyUp, this);
+    // this.searchField.on('keyup', this.onSearchKeyUp, this);
   },
 
   onSearchKeyUp: function(t, e) {

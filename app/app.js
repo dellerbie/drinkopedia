@@ -5,6 +5,6 @@ Ext.setup({
   glossOnIcon: false,
 
   onReady: function() {
-    var mp = new Drinkopedia.MasterPanel();
+     MP = new Drinkopedia.MasterPanel();
   }
 });

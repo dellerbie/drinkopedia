@@ -28,6 +28,8 @@ body.x-android-os.x-phone {
 h1.select-drink {
   background: url(../images/select-your-drink.png) no-repeat;
   background-size: 11.11em 1.54em;
+  width: 11.11em;
+  height: 1.54em;
   margin-left: 2.75em;
   text-indent: -9999px;
 }
@@ -166,6 +168,101 @@ h1.select-drink {
 
 #dp-drink-list li .add-to-favorites.selected {
   background: url(../images/star-selected.png);
+}
+
+#drink-view #img-wrapper {
+  clear: both;
+  overflow: hidden;
+  width: 70%;
+  margin-left: 2.7em;
+}
+
+#drink-view img {
+  width: 9.29em;
+  height: 7.77em;
+  background: url(../images/large-img-background.png) no-repeat;
+  background-size: 9.29em 7.77em;
+  display: block;
+  float: left;
+  padding: 10px;
+}
+
+#drink-view #add-to-fave {
+  width: 2.67em;
+  height: 1.79em;
+  background: url(../images/large-star.png) no-repeat;
+  background-size: 2.67em 1.79em;
+  display: block;
+  float: left;
+}
+
+#drink-view #ingredients-wrapper,
+#drink-view #directions-wrapper {
+  clear: both;
+  float: left;
+  padding: 1.4em 0.8em 0.8em 0.8em;
+  margin: 1.9em 0.8em 0em;
+  background: #f0f0ee;
+  width: 85%;
+  position: relative;
+  -webkit-box-shadow: 5px 5px 8px #888;
+}
+
+#drink-view #ingredients-wrapper h2,
+#drink-view #directions-wrapper h2 {
+  background: url(../images/red-header.png) no-repeat;
+  background-size: 7.15em 1.8em;
+  width: 7.15em;
+  height: 1.8em;
+  line-height: 1.8em;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Chaparral Pro";
+  position: absolute;
+  top: -16px;
+}
+
+#drink-view #ingredients li,
+#drink-view #directions li {
+  overflow: hidden;
+}
+
+#drink-view #ingredients li + li,
+#drink-view #directions li + li {
+  margin-top: 0.3em;
+}
+
+#drink-view #ingredients .amount,
+#drink-view #directions .ordinal {
+  display: block;
+  float: left;
+  width: 3.8em;
+  color: #696969;
+  font-family: "Myriad Pro";
+  font-size: 0.85em;
+  line-height: 1.4em;
+}
+
+#drink-view #directions .ordinal {
+  width: 1.5em;
+/*  color: #415d75;*/
+}
+
+#drink-view #ingredients .ingredient,
+#drink-view #directions .direction {
+  display: block;
+  float: left;
+  color: #415d75;
+  font-family: "Lucida Grande";
+  font-size: 0.8em;
+  line-height: 1.4em;
+  width: 12.2em;
+}
+
+#drink-view #directions .direction {
+  width: 13.2em;
+  font-weight: normal;
 }
 
 
