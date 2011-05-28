@@ -236,7 +236,6 @@ h1.select-drink {
 #drink-view #ingredients .amount,
 #drink-view #directions .ordinal {
   display: block;
-  float: left;
   width: 3.8em;
   color: #696969;
   font-family: "Myriad Pro";
