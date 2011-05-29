@@ -1,6 +1,7 @@
 Drinkopedia.MasterPanel = Ext.extend(Ext.Panel, {
   layout: 'card',
   fullscreen: true,
+  cls: 'dp-panel',
   
   initComponent: function(){
     this.tbar = new Drinkopedia.SearchToolbar();
@@ -65,8 +66,11 @@ Drinkopedia.MasterPanel = Ext.extend(Ext.Panel, {
   },
   
   onDrinkSelected: function(t, record) {
+    var drinkStore = Ext.StoreMgr.get(Drinkopedia.DrinkStore.storeId);
+    drinkStore.loadData([record.data]);
     this.showPanel('drink-view', record.get('name'));
-    this.getLayout().activeItem.tpl.overwrite(this.getLayout().activeItem.body, record.data);
+    // this.getLayout().activeItem.tpl.overwrite(this.getLayout().activeItem.body, record.data);
+    // this.getLayout().activeItem.doLayout();
   },
   
   onBack: function() {

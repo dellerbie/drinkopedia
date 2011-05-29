@@ -10,17 +10,24 @@ body.x-android-os.x-phone {
   font-size: 120%;
 }
 
+.dp-panel {
+  background: url(../images/background.png) repeat-y;
+  font-family: "AmericanTypewriter";
+}
+
 .wrapper {
-  background: url(../images/book-casing.png) no-repeat;
-  background-size: 17.6em 24.33em;
+  background: url(../images/book-top.png) no-repeat;
+  background-size: 17.6em 1.5em;
   padding-top: 1em;
   min-height: 24em;
 }
 
 .content {
-  background: url(../images/papers.png) no-repeat;
-  background-size: 16.91em 23.53em;
-  padding-top: 1em;
+  background-image: url(../images/book-bottom.png), url(../images/book-repeat.png);
+  background-repeat: no-repeat, repeat-y;
+  background-position: left bottom, left top;
+  background-size: 17.6em 1em;
+  padding: 1em 0;
   min-height: 23.2em;
   width: 17.65em;
 }
@@ -137,7 +144,7 @@ h1.select-drink {
 #dp-drink-list li .drink-content {
   float: left;
   width: 9.34em;
-  height: 3.34em;
+  height: 4.2em;
   margin: 0 10px;
   border-bottom: 2px solid #adb5b9;
 }
@@ -147,7 +154,6 @@ h1.select-drink {
   margin-bottom: 0px;
   font-weight: bold;
   font-size: 0.85em;
-  font-family: Helvetica serif;
   color: #3f5c74;
 }
 
@@ -216,8 +222,6 @@ h1.select-drink {
   line-height: 1.8em;
   text-align: center;
   color: #fff;
-  font-weight: bold;
-  font-family: "Chaparral Pro";
   position: absolute;
   top: -16px;
 }
@@ -238,14 +242,12 @@ h1.select-drink {
   float: left;
   width: 3.8em;
   color: #696969;
-  font-family: "Myriad Pro";
   font-size: 0.85em;
   line-height: 1.4em;
 }
 
 #drink-view #directions .ordinal {
   width: 1.5em;
-/*  color: #415d75;*/
 }
 
 #drink-view #ingredients .ingredient,
@@ -253,7 +255,6 @@ h1.select-drink {
   display: block;
   float: left;
   color: #415d75;
-  font-family: "Lucida Grande";
   font-size: 0.8em;
   line-height: 1.4em;
   width: 12.2em;

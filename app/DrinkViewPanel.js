@@ -1,5 +1,6 @@
-Drinkopedia.DrinkViewPanel = Ext.extend(Ext.Panel, {
+Drinkopedia.DrinkViewPanel = Ext.extend(Ext.DataView, {
   portraitTpl: new Ext.XTemplate(
+    '<tpl for=".">',
      '<div class="wrapper">',
    		'<div class="content">',
   			'<div id="img-wrapper">',
@@ -29,13 +30,17 @@ Drinkopedia.DrinkViewPanel = Ext.extend(Ext.Panel, {
   				'</ol>',
   			'</div>',
   		'</div>',
-   	'</div>'
+   	'</div>',
+   	'</tpl>'
   ),
   
   initComponent: function() {    
     this.monitorOrientation = true;
     this.scroll = true;
     this.tpl = this.portraitTpl;
+    this.store = 'drinkStore';
+    this.itemSelector = '#drink-view .content';
+    
     Drinkopedia.DrinkViewPanel.superclass.initComponent.call(this);
   }
 });
