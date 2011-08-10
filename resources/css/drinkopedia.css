@@ -67,17 +67,9 @@ h1.select-drink {
   background-size: 4.99em 3.64em;
 }
 
-#dp-menu-items li.all-drinks.x-item-selected {
-  background: url(../images/all-drinks-selected.png) no-repeat center;
-}
-
 #dp-menu-items li.favorites {
   background: url(../images/favorites.png) no-repeat center;
   background-size: 4.16em 3.5em;
-}
-
-#dp-menu-items li.favorites.x-item-selected {
-  background: url(../images/favorites-selected.png) no-repeat center;
 }
 
 #dp-menu-items li.drink-type {
@@ -85,17 +77,9 @@ h1.select-drink {
   background-size: 6.45em 4.94em;
 }
 
-#dp-menu-items li.drink-type.x-item-selected {
-  background: url(../images/drink-type-selected.png) no-repeat center;
-}
-
 #dp-menu-items li.liquor-type {
   background: url(../images/liquor-type.png) no-repeat center;
   background-size: 6.95em 5.24em;
-}
-
-#dp-menu-items li.liquor-type.x-item-selected {
-  background: url(../images/liquor-type-selected.png) no-repeat center;
 }
 
 #dp-menu-items li.add-ons {
@@ -103,17 +87,9 @@ h1.select-drink {
   background-size: 4.27em 3.31em;
 }
 
-#dp-menu-items li.add-ons.x-item-selected {
-  background: url(../images/add-ons-selected.png) no-repeat center;
-}
-
 #dp-menu-items li.most-popular {
   background: url(../images/most-popular.png) no-repeat center;
   background-size: 6.09em 3.86em
-}
-
-#dp-menu-items li.most-popular.x-item-selected {
-  background: url(../images/most-popular-selected.png) no-repeat center;
 }
 
 #dp-drink-list, #dp-subcategory-list {

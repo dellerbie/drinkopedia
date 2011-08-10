@@ -8,6 +8,14 @@ Ext.regModel('Drink', {
   idProperty: "id"
 });
 
+Ext.regModel('Favorite', {
+  fields: ['id', 'drinkId'],
+  proxy: {
+      type: 'localstorage',
+      id  : 'dp-faves'
+  }
+});
+
 Drinkopedia.DrinksTagFilter = function(tag) {
   return new Ext.util.Filter({
     filterFn: function(item) {
@@ -128,4 +136,10 @@ Drinkopedia.SubCategoriesStore = new Ext.data.Store({
 Drinkopedia.DrinkStore = new Ext.data.Store({
   model: 'Drink',
   storeId: 'drinkStore'
+});
+
+Drinkopedia.FavoritesStore = new Ext.data.Store({
+    model: "Favorite",
+    storeId: 'favoritesStore',
+    autoLoad: 'true'
 });

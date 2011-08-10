@@ -10,7 +10,7 @@ Drinkopedia.DrinkListPanel = Ext.extend(Ext.DataView, {
     						'<h2>{name}</h2>',
     						'<p>{short-description}</p>',
     					'</div>',
-    					'<div class="add-to-favorites"></div>',
+    					'<div class="add-to-favorites {[Drinkopedia.FavoritesStore.find("drinkId", values.id) > -1 ? "selected":""]}"></div>',
     					'<div class="clear"></div>',
     				'</li>',
    				'</tpl>',
@@ -35,8 +35,28 @@ Drinkopedia.DrinkListPanel = Ext.extend(Ext.DataView, {
   },
   
   handleItemTap: function(dv, idx, el, e){
+    if(e.getTarget('.add-to-favorites')) {
+      this.handleAddToFave(dv, idx, el, e);
+      return;
+    } 
     var record = this.store.getAt(idx);
     this.fireEvent('drinkSelected', this, record);
   },
+  
+  handleAddToFave: function(dv, index, item, e) {
+    var faveEl = Ext.get(e.getTarget('.add-to-favorites')).toggleCls('selected');
+    var rec = dv.getRecord(item);
+    var recId = rec.getId();
+    var faveStore = Drinkopedia.FavoritesStore;
+    
+    var faveIndex = faveStore.find('drinkId', recId);
+    
+    if(faveEl.hasCls('selected')) {
+       if( faveIndex < 0) faveStore.add({drinkId: recId});
+    } else {
+      faveStore.removeAt(faveIndex);
+    }
+    faveStore.sync();
+  }
 });
 Ext.reg('dp-drink-list-panel', Drinkopedia.DrinkListPanel);
