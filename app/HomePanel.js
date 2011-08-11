@@ -36,6 +36,7 @@ Drinkopedia.HomePanel = Ext.extend(Ext.DataView, {
     
   //  this.mon(this, "orientationChange", this.onOrientation, this);
    this.mon(this, "itemtap", this.handleItemTap, this);
+   this.mon(this, "beforeactivate", this.handleBeforeActivate, this);
   },
   
   handleItemTap: function(dv, idx, el, e){
@@ -43,5 +44,13 @@ Drinkopedia.HomePanel = Ext.extend(Ext.DataView, {
         category = record.get('id');
     this.fireEvent('categorySelected', this, record);
   },
+  
+  handleBeforeActivate: function() {
+    if(Drinkopedia.FavoritesStore.getCount()) {
+      this.getEl().down('.favorites').show();
+    } else {
+      this.getEl().down('.favorites').hide();
+    }
+  }
 });
 Ext.reg('dp-home-panel', Drinkopedia.HomePanel);

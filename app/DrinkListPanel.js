@@ -19,6 +19,8 @@ Drinkopedia.DrinkListPanel = Ext.extend(Ext.DataView, {
    	'</div>'
   ),
   
+  
+  
   initComponent: function() {
     this.addEvents('drinkSelected');
     this.enableBubble('drinkSelected');
@@ -28,6 +30,7 @@ Drinkopedia.DrinkListPanel = Ext.extend(Ext.DataView, {
     this.tpl = this.portraitTpl;
     this.itemSelector = '#dp-drink-list li';
     this.store = 'drinksStore';
+    this.emptyText = 'You havent selected any favorites';
     
     Drinkopedia.DrinkListPanel.superclass.initComponent.call(this);
     
