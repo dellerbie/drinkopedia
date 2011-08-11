@@ -24,6 +24,14 @@ Drinkopedia.DrinksTagFilter = function(tag) {
   });
 };
 
+Drinkopedia.FavoriteDrinksFilter = function(faveIds) {
+  return new Ext.util.Filter({
+    filterFn: function(item) {
+      return faveIds.indexOf(item.getId()) > -1;
+    }
+  });
+}
+
 Drinkopedia.Categories = {
   "categories": [{
     "name": "Most Popular",

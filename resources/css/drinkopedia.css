@@ -178,6 +178,10 @@ h1.select-drink {
   float: left;
 }
 
+#drink-view #add-to-fave.selected {
+  background: url(../images/large-star-selected.png);
+}
+
 #drink-view #ingredients-wrapper,
 #drink-view #directions-wrapper {
   clear: both;

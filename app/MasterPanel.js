@@ -24,7 +24,6 @@ Drinkopedia.MasterPanel = Ext.extend(Ext.Panel, {
     Drinkopedia.MasterPanel.superclass.initComponent.call(this);
 
     this.mon(this.tbar, 'back', this.onBack, this);
-    // this.mon(this.tbar, 'search', this.onSearch, this);
     this.mon(this, 'categorySelected', this.onCategorySelected, this);
     this.mon(this, 'drinkSelected', this.onDrinkSelected, this);
   },
@@ -59,8 +58,17 @@ Drinkopedia.MasterPanel = Ext.extend(Ext.Panel, {
       this.clearDrinksFilter();
       var drinksStore = Ext.StoreMgr.get(Drinkopedia.DrinksStore.storeId);
       var filter = record.get('id');
+      
+      switch(filter) {
+        case 'all-drinks': break;
+        case 'favorites': 
+          drinksStore.filterBy(function(record, id) {
+            return Drinkopedia.FavoritesStore.find('drinkId', record.getId()) > -1;
+          });
+          break;
+        default: drinksStore.filter(Drinkopedia.DrinksTagFilter(filter));
+      }
 
-      if(filter != 'all-drinks') drinksStore.filter(Drinkopedia.DrinksTagFilter(filter));
       this.showPanel('drink-list', record.get('name'));
     }
   },
@@ -69,8 +77,6 @@ Drinkopedia.MasterPanel = Ext.extend(Ext.Panel, {
     var drinkStore = Ext.StoreMgr.get(Drinkopedia.DrinkStore.storeId);
     drinkStore.loadData([record.data]);
     this.showPanel('drink-view', record.get('name'));
-    // this.getLayout().activeItem.tpl.overwrite(this.getLayout().activeItem.body, record.data);
-    // this.getLayout().activeItem.doLayout();
   },
   
   onBack: function() {
